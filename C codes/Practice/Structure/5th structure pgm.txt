@@ -1,0 +1,29 @@
+#include <stdio.h>
+typedef struct{
+    char name;
+    int roll_no;
+    int std;
+}student_details;
+
+typedef struct{
+    int maths;
+    char english;
+    float science;
+}student_marks;
+
+int main()
+{
+    student_details s1_details;
+    student_marks s1_marks;
+    
+    s1_details.name = 'V';
+    s1_details.roll_no = 11;
+    s1_details.std = 10;
+    
+    printf("Student Name : %c,  STD: %d, Roll no: %d\n\n",s1_details.name,s1_details.roll_no,s1_details.std);
+    
+    s1_marks.maths = 50;
+    s1_marks.english = 'B';
+    s1_marks.science = 65.5;
+    printf("Marks: Science: %.2f, Maths: %d, English: %c",s1_marks.science,s1_marks.maths,s1_marks.english);
+}

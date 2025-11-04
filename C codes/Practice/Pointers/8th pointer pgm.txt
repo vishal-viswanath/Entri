@@ -1,0 +1,22 @@
+# include<stdio.h>
+
+int main()
+{
+    int a;
+    a=100;
+    
+    int *ptr;
+    ptr=&a;
+    
+    int* ptr1;
+    ptr1=ptr;
+    
+    printf("prints the value of 'a' using 'ptr' is: %d",*ptr);
+    printf("\nprintsthe value of 'a' using 'ptr1' is: %d\n\n",*ptr1);
+    
+    a=200;
+    
+    printf("prints the new value of 'a' using 'ptr' is: %d",*ptr);
+    printf("\nprints the new value of 'a' using 'ptr1' is: %d\n\n",*ptr1);
+    
+}

@@ -1,0 +1,46 @@
+#include <stdio.h>
+int add(int a, int b)
+{
+   int sum;
+   sum = a+b;
+    return sum;
+
+}
+int sub(int a, int b)
+{
+   int dif;
+   dif=a-b;
+   return dif;
+}
+int div(int a, int b)
+{
+   int divi;
+   divi=a/b;
+   return divi;
+
+
+}
+int mul(int a, int b)
+{
+   int multi;
+   multi = a*b;
+   return multi;
+}
+int main()
+{
+   int num1, num2;
+   int result;
+   printf("enter your 1st number: ");
+   scanf("%d",&num1);
+   printf("enter your 2nd number: ");
+   scanf("%d",&num2);
+   result=add(num1, num2);
+   printf("Addition is : %d", result);
+   result=sub(num1, num2);
+   printf("\nDifference is : %d", result);
+   result=div(num1, num2);
+   printf("\nDivision is : %d", result);
+   result=mul(num1, num2);
+   printf("\nMutipication is : %d", result);
+   return 0;
+}

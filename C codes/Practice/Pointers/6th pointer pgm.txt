@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+   int a = 10;
+   int* ptr;
+   ptr = &a;
+   
+   printf("Value of a: %d",a);
+   printf("\nValue of a using pointer: %d",*ptr);
+   
+   printf("\nmemory address of a: %p",&a);
+   printf("\nmemory address of a using pointer: %p",ptr);
+   
+   *ptr = 20;
+   printf("\nvalue of a: %d",a);
+   printf("\nvalue of a using pointer: %d",*ptr);
+   
+   printf("\nadding 1 with *ptr %d",*(ptr)+1);
+   printf("\nadding 1 with *ptr %d",(*ptr+1));
+   
+   printf("\nadding 1 with *ptr %d",*(ptr+1));/*The next memmory address value will be shown*/
+   
+   printf("\n%p",ptr);
+   printf("\n%p",ptr+1);/*The next memmory address will be shown*/
+}

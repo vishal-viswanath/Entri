@@ -1,0 +1,24 @@
+#include <stdio.h>
+struct student_details{
+    char name[20];
+    int roll_no;
+    int std;
+};
+
+struct student_mark{
+    int maths;
+    int english;
+    int science;
+    
+};
+
+int main()
+{
+    struct student_details s1details = {"sarath",20,10};
+    struct student_mark s1marks = {60,65,70};
+    struct student_details s2details = {"Akash",1,10};
+    struct student_mark s2marks = {70,65,60};
+    
+    printf("\n  Student details \n********************\n \n Name: %s\n Roll no: %d\n STD: %d\n\n  Marks\n*********\n Maths: %d\n English: %d\n Science: %d\n",s1details.name,s1details.roll_no,s1details.std,s1marks.maths,s1marks.english,s1marks.science);
+    printf("\n  Student details \n********************\n \n Name: %s\n roll no: %d\n STD: %d\n\n  Marks\n*********\n Maths: %d\n English: %d\n Science: %d\n",s2details.name,s2details.roll_no,s2details.std,s2marks.maths,s2marks.english,s2marks.science);
+}

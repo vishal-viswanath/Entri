@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+struct mark{
+    int maths;
+    int english;
+    int science;
+    
+}rahul = {50,60,70}, sarang = {60,70,50}, jayakrishnan = {70,60,50};
+
+int main()
+{
+    printf("Marks of Rahul: Maths: %d, English: %d, Science: %d\n",rahul.maths,rahul.english,rahul.science);
+    printf("\nMarks of Sarang: Maths: %d, English: %d, Science: %d\n",sarang.maths,sarang.english,sarang.science);
+    printf("\nMarks of Jayakrishnan: Maths: %d, English: %d, Science: %d\n",jayakrishnan.maths,jayakrishnan.english,jayakrishnan.science);
+}

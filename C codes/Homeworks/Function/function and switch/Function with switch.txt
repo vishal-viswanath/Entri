@@ -1,0 +1,85 @@
+#include <stdio.h>
+
+
+    
+float addition(float num1, float num2)
+{
+    float add;
+    add = num1+num2;
+    return add;
+}
+    
+float subtraction(float num1, float num2)
+{
+    float sub;
+    sub = num1 - num2;
+    return sub;
+}
+
+float multiplication(float num1, float num2)
+{
+    float mul;
+    mul = num1*num2;
+    return mul;
+}
+
+float division (float num1, float num2)
+{
+    float div;
+   if(num2==0)
+{
+   printf("\nSomething wrong, Divide by '0' ERROR");
+   return 0;
+}
+   else{
+   
+    div = num1/num2;
+    return div;
+
+}
+}
+
+int main()
+{
+
+float first_num, second_num, result;
+char parameter;
+
+printf("______Simple Calculator_______\n");
+printf("\n************************");
+
+printf("\nEnter the 1st no: ");
+scanf("%f",&first_num);
+
+printf("\nEnter the parameter:  '+', '-', '/', '*' : ");
+scanf(" %c", &parameter);
+
+printf("\nEnter the second no: ");
+scanf("%f",&second_num);
+
+switch(parameter)
+{
+    case '+':
+    result = addition(first_num, second_num);
+    break;
+    
+    case '-':
+    result = subtraction(first_num, second_num);
+    break;
+    
+    case '*':
+    result = multiplication(first_num, second_num);
+    break;
+    
+    case '/':
+    result = division(first_num, second_num);
+    break;
+
+    default:
+    printf("\nUfff the parameter u entered is invalid\n");
+    /*result = 0;*/
+    break;
+}
+    printf("\nResult is %.2f",result);
+    return 0;
+}

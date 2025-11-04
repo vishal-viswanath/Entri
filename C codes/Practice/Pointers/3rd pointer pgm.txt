@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main()
+{
+    int a = 10;
+    int b = 20;
+    
+    int *ptr1 = &a;
+    int *ptr2 = &b;
+   
+    printf("value of a: %d\n",a);
+    printf("value of a, using pointer: %d\n",*ptr1);
+    printf("address of a: %p\n",&a);
+    printf("address of a, using pointer: %p\n",ptr1);
+  
+    a=100;
+    
+    printf("value of a: %d\n",a);
+    printf("value of a, using pointer: %d\n",*ptr1);
+    printf("address of a: %p\n",&a);
+    printf("address of a, using pointer: %p\n\n",ptr1);
+    
+    printf("value of b: %d\n", b);
+    printf("value of b, using pointer: %d\n",*ptr2);
+    printf("address of b: %p\n",&b);
+    printf("address of b, using pointer: %p\n\n",ptr2);
+    
+    b=2000;
+    
+    printf("value of b: %d\n", b);
+    printf("value of b, using pointer: %d\n",*ptr2);
+    printf("address of b: %p\n", &b);
+    printf("address of b, using pointer: %p\n\n",ptr2);
+    
+   
+}

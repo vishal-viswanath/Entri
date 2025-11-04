@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+int main()
+{
+    int a = 10;
+    int x;
+    int *ptr;
+    
+    ptr = &a;
+    
+    
+    x = *ptr;
+    printf("value of 'a' is: %d\n",a);
+    printf("value of 'x' is: %d\n\n",x);   
+    
+    a = 20;
+    printf("value of 'a' is: %d\n",a);
+    printf("value of 'x' is: %d\n\n",x);
+    
+    x = *ptr;
+    printf("value of 'x' is: %d\n",x);
+    printf("value of 'a' is: %d\n\n",a);
+    
+    printf("address of a: %p\n",ptr);
+    int *c = ptr;
+    printf("address of a: %p",c);
+    printf("\nprints the value of 'a' using 2nd pointer: %d",*c);
+}

@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    int maths_mark;
+    float science_mark;
+    float english_mark;
+
+    printf("Maths Mark is : ");
+    scanf("%d",&maths_mark);
+
+    printf("Science Mark is : ");
+    scanf("%f",&science_mark);
+
+    printf("English mark is : ");
+    scanf("%f",&english_mark);
+
+    printf("\n[Student data]\n\nStudent name is :\"Vishal_Viswanath\"|\t\"STD :10th\"|\"Model exam marks\"\n\n");
+    printf("\nMaths mark is :%d",maths_mark);
+    printf("\nScience mark is:%f",science_mark);
+    printf("\nEnglish mark is:%f",english_mark);
+
+    return 0;
+}

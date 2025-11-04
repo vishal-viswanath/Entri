@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+void printbin(int value)
+{
+    int mask;
+    
+    for(int i = 7; i >= 0; i--)
+    {
+        mask = 1 << i;
+        
+        if(value & mask)
+        {
+            printf("1");
+        }
+        else
+        {
+            printf("0");
+        }
+    }
+}
+void setbit(int value1,int pos)
+{
+    int mask;
+    mask = 1 << pos;
+    
+    value1 = value1 | mask;
+    
+    printbin(value1);
+}
+
+void clearbit (int value, int clear_pos)
+{
+    int mask;
+    mask = ~(1<<clear_pos);
+    value = value&mask;
+    
+    printbin(value);
+}
+
+
+int main()
+{
+    int a,pos,pos_clear;
+    printf("enter a value: ");
+    scanf("%d",&a);
+    
+    printbin(a);
+    
+    printf("\nenter the bit position to set: ");
+    scanf("%d",&pos);
+    
+    setbit(a,pos);
+    
+    printf("\nenter the bit position to clear: ");
+    scanf("%d",&pos_clear);
+    
+    clearbit(a,pos_clear);
+}

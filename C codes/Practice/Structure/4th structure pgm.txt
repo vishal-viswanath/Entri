@@ -1,0 +1,18 @@
+#include <stdio.h>
+struct student_details{
+    char name[20];
+    int Roll_no;
+    int std;
+}s1_details = {"Arun",1,10};
+
+struct student_mark{
+    int maths;
+    char english;
+    float science;
+}s1_marks = {70,75,79.5};
+
+int main()
+{
+    printf("    Student details    \n *********************\n\n Name: %s\n Roll no: %d\n STD: %d\n\n",s1_details.name,s1_details.Roll_no,s1_details.std);
+    printf("    Student Marks     \n --------------------\n\n Maths: %d\n English: %d\n Science: %.2f\n\n",s1_marks.maths,s1_marks.english,s1_marks.science);
+}

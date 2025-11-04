@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+   int arr[5] = {1,2,3,4,5};
+   int* ptr = arr;
+   
+   for(int i =0; i<5; i++)
+   {
+       printf("value of arr[%d]=%d and the memmory address is %p\n",i,*(ptr+i),ptr+i);
+       
+       /*add 5 to each of the array elements*/
+       
+       printf("value of arr[%d]=%d and the memmory address is %p\n\n",i,(*(ptr+i)+5),ptr+i);
+   }
+    
+}

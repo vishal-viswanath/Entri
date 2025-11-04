@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+void printbin (int value)
+{
+    int mask;
+    for(int i = 7; i >= 0; i--)
+    {
+        mask = 1 << i;
+        if(value & mask)
+        {
+            printf("1");
+        }
+        else
+        {
+            printf("0");
+        }
+    }
+}
+
+void toggle_bitpos(int value, int bitpos)
+{
+    int mask = 1<<bitpos;
+    value = value^mask;
+    
+    printbin(value);
+}
+
+int main()
+{
+    int value,n;
+    
+    printf("Enter a value: ");
+    scanf("%d",&value);
+    
+    printbin(value);
+    
+    printf("\nenter the bit position to toggle: ");
+    scanf("%d",&n);
+    
+    toggle_bitpos(value,n);
+    
+    
+}

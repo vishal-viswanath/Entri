@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+int main()
+{
+       
+    int arr[5] = {10,20,30,40,50};
+    
+    int* ptr;
+    ptr = arr;
+    
+    int x;
+    
+    x =  *ptr;
+    
+    printf("prints the value of 'x': %d", x);
+    printf("\nprints the value of arr[0] using pointer: %d\n\n", *ptr);
+    
+    x = *ptr++;
+    
+    printf("prints the value of 'x': %d", x);
+    printf("\nprints the value of arr[0] using pointer: %d\n\n", *ptr);
+    
+   
+}

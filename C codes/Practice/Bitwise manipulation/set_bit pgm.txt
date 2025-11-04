@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+void print_bin(int print_num)
+{
+    int mask;
+    for(int i = 31; i >= 0; i--)
+    {
+        mask = 1 << i;
+        if(print_num & mask)
+        {
+            printf("1");
+        }
+        else 
+        {
+            printf("0");
+        }
+    }
+}
+
+void set_bit(int user_value,int pos_set)
+{
+    int mask;
+    
+    mask = 1 << pos_set;
+    user_value = user_value | mask;
+    
+    print_bin(user_value);
+    
+}
+
+int main()
+{
+    
+    int value,set_pos;
+    
+    printf("Enter a value: ");
+    scanf("%d",&value);
+    
+    print_bin(value);
+    
+    printf("\nEnter the bit position to change: ");
+    scanf("%d",&set_pos);
+    
+    set_bit(value,set_pos);
+    
+}

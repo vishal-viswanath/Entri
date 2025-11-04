@@ -1,0 +1,15 @@
+# include<stdio.h>
+
+int main()
+{
+   int a;
+   a = 10;
+   
+   printf("prints the value of a: %d",a);
+   
+   int b;
+   b = ++a;
+   
+   printf("\nprints the value of b: %d",b);
+   printf("\nprints the value of a: %d",a);
+}

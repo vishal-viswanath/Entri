@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+typedef struct{
+    char book_name[50];
+    char author_name[50];
+    int price;
+}book;
+
+int main()
+{
+    book book1 = {"Aadujeevitham","Benyamin",250};
+    book book2 = {"Wings of fire","A P J Abdul kalam",200};
+    book book3 = {"Balyakalasakhi","Vaikom muhammad basheer",150};
+    
+    printf(" Book name: %s, Author: %s, Price: %d\n",book1.book_name,book1.author_name,book1.price);
+    printf(" Book name: %s, Author: %s, Price: %d\n",book2.book_name,book2.author_name,book2.price);
+    printf(" Book name: %s, Author: %s, pricee: %d\n",book3.book_name,book3.author_name,book3.price);
+    
+    if(book1.price>book2.price)
+    {
+        if(book1.price>book3.price)
+        {
+            printf("\n The highest priced book is Aadujeevitham");
+        }
+    }
+    else
+    {
+        if(book2.price>book3.price)
+        {
+            printf("\n The highest priced book is Wings of fire");
+        }
+        else
+        {
+            printf("\n The highest priced book is Balyakalasakhi");
+        }
+    }
+}
