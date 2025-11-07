@@ -1,0 +1,69 @@
+#include <stdio.h>
+
+int sec_lar_value(int n1,int *ptr1)
+{
+    int largest,sec_largest;
+    
+    largest = ptr1[0];
+    sec_largest= ptr1[0];
+
+   
+    for(int i=0; i<n1; i++)
+    {
+        if(largest < *(ptr1+i))
+        {
+            sec_largest = largest;
+            largest = *(ptr1+i);
+        }
+        else if(*(ptr1+i) < largest && *(ptr1+i) > sec_largest)
+        {
+            sec_largest=*(ptr1+i);
+        }
+    }
+    
+    if(sec_largest == ptr1[0])
+        {
+            sec_largest = 0;
+        }
+    
+    return sec_largest;
+
+}
+
+int main()
+{
+    int n;
+    int second_lar;
+    int* ptr;
+    
+    printf("enter the size of the array: ");
+    scanf("%d",&n);
+    
+    int arr[n];
+    
+    printf("enter the elements in the array:\n");
+    
+    for(int i=0; i<n; i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    
+    /*for(int j=0; j<a;j++)
+    {
+    printf("the %dth element of aar[%d] = %d\n",j,j,arr[j]);
+    }*/
+    
+    ptr=arr;
+    
+    second_lar=sec_lar_value(n,ptr);
+    if(second_lar == 0)
+    {
+        printf("all the elements are same");
+    }
+    else{
+    printf("second largest element in the array:%d",second_lar);
+    }
+    
+    
+    return 0 ;
+}
