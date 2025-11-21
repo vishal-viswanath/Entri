@@ -1,0 +1,41 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="MCU" CircId="mega328-2" mainComp="false" Show_id="true" Show_Val="false" Pos="-16,-160" rotation="0" hflip="1" vflip="1" label="mega328-2" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../../../Practice/Traffic_signal/Traffic_signal/Debug/Traffic_signal.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="LedRgb" CircId="LedRgb-5" mainComp="false" Show_id="false" Show_Val="false" Pos="-180,-72" rotation="-180" hflip="1" vflip="1" label="LedRgb-5" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" CommonCathode="true" Threshold_R="2.4 V" MaxCurrent_R="30 mA" Resistance_R="0.6 Ω" Threshold_G="3.5 V" MaxCurrent_G="30 mA" Resistance_G="0.6 Ω" Threshold_B="3.5 V" MaxCurrent_B="30 mA" Resistance_B="0.6 Ω" />
+
+<item itemtype="Ground" CircId="Ground-7" mainComp="false" Show_id="false" Show_Val="false" Pos="-204,-16" rotation="0" hflip="1" vflip="1" label="Ground-7" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="LedRgb" CircId="LedRgb-13" mainComp="false" Show_id="false" Show_Val="false" Pos="-180,-144" rotation="-180" hflip="1" vflip="1" label="LedRgb-13" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" CommonCathode="true" Threshold_R="2.4 V" MaxCurrent_R="30 mA" Resistance_R="0.6 Ω" Threshold_G="3.5 V" MaxCurrent_G="30 mA" Resistance_G="0.6 Ω" Threshold_B="3.5 V" MaxCurrent_B="30 mA" Resistance_B="0.6 Ω" />
+
+<item itemtype="Resistor" CircId="Resistor-25" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-112,-136" rotation="0" hflip="1" vflip="1" label="Resistor-25" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="100 Ω" />
+
+<item itemtype="Resistor" CircId="Resistor-32" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-112,-112" rotation="0" hflip="1" vflip="1" label="Resistor-32" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="10 Ω" />
+
+<item itemtype="LedRgb" CircId="LedRgb-33" mainComp="false" Show_id="false" Show_Val="false" Pos="-180,-108" rotation="-180" hflip="1" vflip="1" label="LedRgb-33" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" CommonCathode="true" Threshold_R="2.4 V" MaxCurrent_R="30 mA" Resistance_R="0.6 Ω" Threshold_G="3.5 V" MaxCurrent_G="30 mA" Resistance_G="0.6 Ω" Threshold_B="3.5 V" MaxCurrent_B="30 mA" Resistance_B="0.6 Ω" />
+
+<item itemtype="Node" CircId="Node-35" mainComp="false" Pos="-204,-72" />
+
+<item itemtype="Node" CircId="Node-36" mainComp="false" Pos="-204,-108" />
+
+<item itemtype="Connector" uid="Connector-5" startpinid="LedRgb-5-Pin1" endpinid="mega328-2-PORTD5" pointList="-164,-72,-24,-72" />
+
+<item itemtype="Connector" uid="Connector-58" startpinid="Resistor-25-rPin" endpinid="mega328-2-PORTD3" pointList="-96,-136,-52,-136,-52,-120,-24,-120" />
+
+<item itemtype="Connector" uid="Connector-59" startpinid="LedRgb-13-Pin0" endpinid="Resistor-25-lPin" pointList="-164,-136,-128,-136" />
+
+<item itemtype="Connector" uid="Connector-71" startpinid="Resistor-32-rPin" endpinid="mega328-2-PORTD4" pointList="-96,-112,-24,-112" />
+
+<item itemtype="Connector" uid="Connector-74" startpinid="LedRgb-33-Pin0" endpinid="Resistor-32-lPin" pointList="-164,-100,-136,-100,-136,-112,-128,-112" />
+
+<item itemtype="Connector" uid="Connector-79" startpinid="LedRgb-5-Pin3" endpinid="Node-35-1" pointList="-196,-72,-204,-72" />
+
+<item itemtype="Connector" uid="Connector-81" startpinid="Node-35-2" endpinid="Ground-7-Gnd" pointList="-204,-72,-204,-32" />
+
+<item itemtype="Connector" uid="Connector-83" startpinid="LedRgb-33-Pin3" endpinid="Node-36-1" pointList="-196,-108,-204,-108" />
+
+<item itemtype="Connector" uid="Connector-84" startpinid="LedRgb-13-Pin3" endpinid="Node-36-0" pointList="-196,-144,-204,-144,-204,-108" />
+
+<item itemtype="Connector" uid="Connector-85" startpinid="Node-36-2" endpinid="Node-35-0" pointList="-204,-108,-204,-72" />
+
+</circuit>
