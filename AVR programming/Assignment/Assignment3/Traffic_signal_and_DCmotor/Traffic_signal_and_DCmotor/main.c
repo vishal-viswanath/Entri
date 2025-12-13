@@ -20,14 +20,14 @@ void cclk(void);
 volatile uint8_t int0_flag = 0;
 
 
-/*void delay(uint16_t ms)                // user defined function for 1sec delay
+void delay(uint16_t ms)                // user defined function for 1sec delay
 {
 	while (ms--)
 	{
 		while(!(TIFR0&(1<<OCF0A)));
 		TIFR0|=(1<<OCF0A);
 	}
-}*/
+}
 
 ISR(INT0_vect)                     // ISR for change from normal state to interrupt state
 {
@@ -37,7 +37,7 @@ ISR(INT0_vect)                     // ISR for change from normal state to interr
 int main(void)
 {
 	
-	/*TCNT0=0;                       // set TCNT0 initial value
+	TCNT0=0;                       // set TCNT0 initial value
 	
 	TCCR0A&=~(1<<WGM00);           // configure CTC mode
 	TCCR0A|=(1<<WGM01);
@@ -45,7 +45,7 @@ int main(void)
 	TCCR0B|=(1<<CS00|1<<CS01);     // configure prescalar 64
 	TCCR0B&=~(1<<CS02);
 	
-	OCR0A=249;        */             // set OCR value range
+	OCR0A=249;                     // set OCR value range
 	
 	EIMSK|=(1<<INT0);              // set external interrupt type
 	
@@ -65,46 +65,47 @@ int main(void)
 		
 		if (int0_flag == 1)              // Traffic light rule after interrupt occur 
 		{
-			orange();
-			//delay(5000);
-			_delay_ms(3000);
 			clk();
 			red();
-			//delay(5000);
-			_delay_ms(5000);
+			delay(6000);
+			//_delay_ms(5000);
 			red();
 			stp_motor();
-			//delay(10000);
-			_delay_ms(5000);
+			delay(5000);
+			//_delay_ms(5000);
 			cclk();
 			red();
-			//delay(5000);
-			_delay_ms(5000);
-			orange();
+			delay(6000);
+			//_delay_ms(5000);
 			stp_motor();
-			//delay(5000);
-			_delay_ms(3000);
-			stp_LED();
-			_delay_ms(2000);
-			
-			int0_flag =0;
+			orange();
+			delay(5000);
+			//_delay_ms(3000);
+			green();
+			delay(3000);
+			//_delay_ms(3000);
+			orange();
+			delay(3000);
+			//_delay_ms(3000);
+								
+			int0_flag =0;           // flag changes to normal state
 
 		}
 		else
 		{
-			orange();                           // Traffic light rule under normal conditions
-			//delay(3000);
-			_delay_ms(3000);
-			green();
-			//delay(3000);
-			_delay_ms(3000);
+			red();                 // Traffic light rule under normal conditions
+			delay(3000);
+			//_delay_ms(3000);
 			orange();
-			//delay(3000);
-			_delay_ms(3000);
-			red();
-			//delay(3000);
-			_delay_ms(3000);
-	
+			delay(3000);
+			//_delay_ms(3000);
+			green();                           
+			delay(3000);
+			//_delay_ms(3000);
+			orange();
+			delay(3000);
+			//_delay_ms(3000);
+				
 		}
 		
 	}
