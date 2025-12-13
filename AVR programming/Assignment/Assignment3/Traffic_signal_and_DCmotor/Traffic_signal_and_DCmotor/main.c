@@ -61,18 +61,7 @@ int main(void)
 	
 	while (1)
 	{
-		orange();                           // Traffic light rule under normal conditions
-		//delay(3000);
-		_delay_ms(3000);
-		green();
-		//delay(3000);
-		_delay_ms(3000);
-		orange();
-		//delay(3000);
-		_delay_ms(3000);
-		red();
-		//delay(3000);
-		_delay_ms(3000);
+		
 		
 		if (int0_flag == 1)              // Traffic light rule after interrupt occur 
 		{
@@ -100,6 +89,22 @@ int main(void)
 			
 			int0_flag =0;
 
+		}
+		else
+		{
+			orange();                           // Traffic light rule under normal conditions
+			//delay(3000);
+			_delay_ms(3000);
+			green();
+			//delay(3000);
+			_delay_ms(3000);
+			orange();
+			//delay(3000);
+			_delay_ms(3000);
+			red();
+			//delay(3000);
+			_delay_ms(3000);
+	
 		}
 		
 	}
