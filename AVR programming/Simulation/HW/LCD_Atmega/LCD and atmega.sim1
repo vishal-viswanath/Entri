@@ -1,0 +1,23 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="MCU" CircId="mega328-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-240,-36" rotation="0" hflip="1" vflip="1" label="mega328-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../../../Practice/LCD_interface/LCD_interface/Debug/LCD_interface.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="true" SerialMon="-1" />
+
+<item itemtype="Hd44780" CircId="Hd44780-2" mainComp="false" Show_id="true" Show_Val="false" Pos="-516,-64" rotation="0" hflip="1" vflip="1" label="Hd44780-2" idLabPos="70,-82" labelrot="0" valLabPos="-16,20" valLabRot="0" Rows="2" Cols="16" />
+
+<item itemtype="Ground" CircId="Ground-7" mainComp="false" Show_id="false" Show_Val="false" Pos="-532,-24" rotation="0" hflip="1" vflip="1" label="Ground-7" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Connector" uid="Connector-18" startpinid="Hd44780-2-dataPin7" endpinid="mega328-1-PORTD2" pointList="-420,-56,-420,-4,-248,-4" />
+
+<item itemtype="Connector" uid="Connector-19" startpinid="Hd44780-2-dataPin6" endpinid="mega328-1-PORTD3" pointList="-428,-56,-428,4,-248,4" />
+
+<item itemtype="Connector" uid="Connector-20" startpinid="Hd44780-2-dataPin5" endpinid="mega328-1-PORTD4" pointList="-436,-56,-436,12,-248,12" />
+
+<item itemtype="Connector" uid="Connector-21" startpinid="Hd44780-2-dataPin4" endpinid="mega328-1-PORTD5" pointList="-444,-56,-444,52,-248,52" />
+
+<item itemtype="Connector" uid="Connector-23" startpinid="Hd44780-2-PinEn" endpinid="mega328-1-PORTB3" pointList="-484,-56,-484,120,-192,120,-192,60,-200,60" />
+
+<item itemtype="Connector" uid="Connector-28" startpinid="Hd44780-2-PinRS" endpinid="mega328-1-PORTB4" pointList="-500,-56,-500,136,-176,136,-176,52,-200,52" />
+
+<item itemtype="Connector" uid="Connector-29" startpinid="Hd44780-2-PinRW" endpinid="Ground-7-Gnd" pointList="-492,-56,-492,-40,-532,-40" />
+
+</circuit>
