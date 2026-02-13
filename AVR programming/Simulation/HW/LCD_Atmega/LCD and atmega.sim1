@@ -1,10 +1,16 @@
 <circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
 
-<item itemtype="MCU" CircId="mega328-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-240,-36" rotation="0" hflip="1" vflip="1" label="mega328-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../../../Practice/LCD_interface/LCD_interface/Debug/LCD_interface.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="true" SerialMon="-1" />
+<item itemtype="MCU" CircId="mega328-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-240,-36" rotation="0" hflip="1" vflip="1" label="mega328-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="../../../Practice/ADC_LM35/ADC_LM35/Debug/ADC_LM35.hex" Auto_Load="false" saveEepr="true" Logic_Symbol="false" Rst_enabled="false" Ext_Osc="false" Wdt_enabled="false" Clk_Out="false" MainMcu="true" SerialMon="-1" />
 
 <item itemtype="Hd44780" CircId="Hd44780-2" mainComp="false" Show_id="true" Show_Val="false" Pos="-516,-64" rotation="0" hflip="1" vflip="1" label="Hd44780-2" idLabPos="70,-82" labelrot="0" valLabPos="-16,20" valLabRot="0" Rows="2" Cols="16" />
 
 <item itemtype="Ground" CircId="Ground-7" mainComp="false" Show_id="false" Show_Val="false" Pos="-532,-24" rotation="0" hflip="1" vflip="1" label="Ground-7" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-10" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-248,-108" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-10" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Voltage="5 V" Out="true" />
+
+<item itemtype="Potentiometer" CircId="Potentiometer-11" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-140,-108" rotation="0" hflip="1" vflip="1" label="Potentiometer-11" idLabPos="-16,-40" labelrot="0" valLabPos="15,-20" valLabRot="0" Resistance="1 kΩ" Value_Ohm="315 Ω" Slider="false" Scale="1" />
+
+<item itemtype="Ground" CircId="Ground-12" mainComp="false" Show_id="false" Show_Val="false" Pos="-84,-68" rotation="0" hflip="1" vflip="1" label="Ground-12" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
 
 <item itemtype="Connector" uid="Connector-18" startpinid="Hd44780-2-dataPin7" endpinid="mega328-1-PORTD2" pointList="-420,-56,-420,-4,-248,-4" />
 
@@ -19,5 +25,11 @@
 <item itemtype="Connector" uid="Connector-28" startpinid="Hd44780-2-PinRS" endpinid="mega328-1-PORTB4" pointList="-500,-56,-500,136,-176,136,-176,52,-200,52" />
 
 <item itemtype="Connector" uid="Connector-29" startpinid="Hd44780-2-PinRW" endpinid="Ground-7-Gnd" pointList="-492,-56,-492,-40,-532,-40" />
+
+<item itemtype="Connector" uid="Connector-30" startpinid="Fixed Voltage-10-outnod" endpinid="Potentiometer-11-PinA" pointList="-232,-108,-156,-108" />
+
+<item itemtype="Connector" uid="Connector-31" startpinid="Potentiometer-11-PinM" endpinid="mega328-1-PORTC0" pointList="-140,-92,-140,12,-200,12" />
+
+<item itemtype="Connector" uid="Connector-32" startpinid="Potentiometer-11-PinB" endpinid="Ground-12-Gnd" pointList="-124,-108,-84,-108,-84,-84" />
 
 </circuit>
