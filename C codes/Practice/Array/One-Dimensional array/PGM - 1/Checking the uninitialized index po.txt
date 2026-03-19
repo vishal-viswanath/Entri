@@ -1,0 +1,21 @@
+//Checking the uninitialized index positions value with first element
+
+//Findings: Compiler automatically assign value '0' to uninitialized index positions if given first element else compiler assign garbage values in all position.
+
+#include <stdio.h>
+
+int main()
+{
+   int i,a[5]={1};
+   
+   printf("The array elements are :\t");
+   
+   for(i=0;i<5;i++)
+   {
+       printf("%d\t",a[i]);
+   }
+
+    return 0;
+}
+
+Output: The array elements are: 1  0  0  0  0

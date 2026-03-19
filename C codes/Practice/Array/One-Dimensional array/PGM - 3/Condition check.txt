@@ -1,0 +1,34 @@
+// Condition check
+
+
+#include <stdio.h>
+
+int main()
+{
+   int i, a[10];
+   
+   for(i=0;i<10;i++)
+   {
+       if(i<5)
+       {
+           a[i]=0;
+       }
+       else
+       {
+           a[i]=1;
+       }
+   }
+
+   printf("Array elements are: ");
+
+   for(i=0;i<10;i++)
+   {
+
+   printf("%d ",a[i]);
+
+   }
+
+    return 0;
+}
+
+Output :Array elements are: 0  0  0  0  0  1  1  1  1  1

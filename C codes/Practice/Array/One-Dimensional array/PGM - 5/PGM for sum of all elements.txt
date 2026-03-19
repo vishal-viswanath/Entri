@@ -1,0 +1,35 @@
+// PGM for sum of all elements
+
+#include <stdio.h>
+
+int main()
+{
+    int i, a[5], sum =0;
+    
+    printf("Enter array elements: ");
+    
+    for(i=0; i<5; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    
+    for(i=0;i<5;i++)
+    {
+        sum+=a[i];
+    }
+    
+    printf("\nArray elements are:");
+    
+    for(i=0;i<5;i++)
+    {
+        printf("%d\t",a[i]);
+    }
+    
+    printf("\nSum is: %d",sum);
+
+    return 0;
+}
+
+Output: Enter array elements: 1  2  3  4  5
+      : Array elements are : 1  2  3  4  5
+      : Sum is: 15

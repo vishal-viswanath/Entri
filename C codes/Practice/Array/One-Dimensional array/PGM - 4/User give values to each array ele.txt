@@ -1,0 +1,27 @@
+// User give values to each array element
+
+#include <stdio.h>
+
+int main()
+{
+  int i, a[5];
+  
+  printf("Enter array elements: ");
+  
+  for(i=0;i<5;i++)
+  {
+      scanf("%d",&a[i]);
+  }
+  
+  printf("\nArray elements are: ");
+  
+  for(i=0;i<5;i++)
+  {
+      printf("%d\t",a[i]);
+  }
+    return 0;
+}
+
+Output : Enter array elements : 1  2  3  4  5
+
+         Array elements are : 1  2  3  4  5

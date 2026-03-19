@@ -1,0 +1,39 @@
+Note: First pgm continues (Checking index values in different data types)
+
+#include <stdio.h>
+
+int main()
+{
+   int i,a[5]={1};
+   
+   float b[5]={1.1};
+   
+   char c[5]={'a'};
+   
+   printf("The integer array elements are :\t");
+   
+   for(i=0;i<5;i++)
+   {
+       printf("%d\t",a[i]);
+   }
+   
+   printf("\nThe floating array elements are:");
+   
+   for(i=0;i<5;i++)
+   {
+       printf("\t%f",b[i]);
+   }
+   
+   printf("\nThe Character array elements are:");
+   
+   for(i=0;i<5;i++)
+   {
+       printf("\t%c",c[i]);
+   }
+
+    return 0;
+}
+
+Output : The integer array elements are : 1  0  0  0  0
+       : The floating array elements are : 1.1  0.0  0.0  0.0  0.0
+       : The Character array elements are : A  null  null  null  null

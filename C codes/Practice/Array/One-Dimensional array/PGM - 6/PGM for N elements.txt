@@ -1,0 +1,50 @@
+//PGM for N elements
+
+#include <stdio.h>
+#define N 10
+
+int main()
+{
+   int i, a[N], n;
+   
+   printf("Enter the array size: ");
+   
+   scanf("%d",&n);
+   
+   printf("\nEnter the array elements: ");
+   
+   for(i=0;i<n;i++)
+   {
+       scanf("%d",&a[i]);
+   }
+   
+   printf("\nThe array: ");
+   
+   for(i=0;i<n;i++)
+   {
+       printf("%d",a[i]);
+   }
+   
+   printf("\nFirst element is: %d",a[0]);
+   
+   printf("\nLast element is: %d",a[n-1]);
+   
+   printf("\nMiddle element is: %d",a[(n-1)/2]);
+   
+   printf("\nHalf of last element: %d",a[n-1]/2);
+   return 0;
+}
+
+Output: Enter the array size: 5
+
+      : Enter the array elements: 1  2  3  4  5
+
+      : The array: 1  2  3  4  5
+
+      : First element: 1
+
+      : Last element: 5
+
+      : Middle element: 3
+
+      : Half of last element: 2
