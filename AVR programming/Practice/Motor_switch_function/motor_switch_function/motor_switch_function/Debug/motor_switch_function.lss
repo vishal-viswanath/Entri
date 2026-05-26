@@ -69,11 +69,11 @@ Disassembly of section .text:
 0000007c <__bad_interrupt>:
   7c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
-00000080 <CW>:
+00000080 <CCW>:
 		}
     }
 }
-void CW()
+void CCW()
 {
 	PORTB|=(1<<PB4);
   80:	85 b1       	in	r24, 0x05	; 5
@@ -85,9 +85,9 @@ void CW()
   8a:	85 b9       	out	0x05, r24	; 5
   8c:	08 95       	ret
 
-0000008e <CCW>:
+0000008e <CW>:
 }
-void CCW()
+void CW()
 {
 	PORTB|=(1<<PB5);
   8e:	85 b1       	in	r24, 0x05	; 5
@@ -136,8 +136,8 @@ int main(void)
   ba:	4d 99       	sbic	0x09, 5	; 9
   bc:	03 c0       	rjmp	.+6      	; 0xc4 <main+0x1a>
 		{
-			CW();
-  be:	0e 94 40 00 	call	0x80	; 0x80 <CW>
+			CCW();
+  be:	0e 94 40 00 	call	0x80	; 0x80 <CCW>
   c2:	f9 cf       	rjmp	.-14     	; 0xb6 <main+0xc>
 		}
 		else if((PIND&(1<<PD5)) && !(PIND&(1<<PD2)))
@@ -146,8 +146,8 @@ int main(void)
   c8:	4a 99       	sbic	0x09, 2	; 9
   ca:	03 c0       	rjmp	.+6      	; 0xd2 <main+0x28>
 		{
-			CCW();
-  cc:	0e 94 47 00 	call	0x8e	; 0x8e <CCW>
+			CW();
+  cc:	0e 94 47 00 	call	0x8e	; 0x8e <CW>
   d0:	f2 cf       	rjmp	.-28     	; 0xb6 <main+0xc>
 		}
 		else

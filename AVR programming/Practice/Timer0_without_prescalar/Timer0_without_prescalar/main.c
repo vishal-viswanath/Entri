@@ -4,8 +4,8 @@
  * Created: 28-11-2025 22:59:20
  * Author : User
  */ 
-#define F_CPU 16000000UL
 #include <avr/io.h>
+#define F_CPU 16000000UL
 
 void delay_1s(void)
 {

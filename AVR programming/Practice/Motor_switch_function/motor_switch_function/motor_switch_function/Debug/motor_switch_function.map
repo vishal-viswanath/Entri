@@ -236,10 +236,10 @@ END GROUP
                 0x0000007c                __vector_20
                 0x00000080                . = ALIGN (0x2)
  *(.text.*)
- .text.CW       0x00000080        0xe main.o
-                0x00000080                CW
- .text.CCW      0x0000008e        0xe main.o
-                0x0000008e                CCW
+ .text.CCW      0x00000080        0xe main.o
+                0x00000080                CCW
+ .text.CW       0x0000008e        0xe main.o
+                0x0000008e                CW
  .text.STP      0x0000009c        0xe main.o
                 0x0000009c                STP
  .text.main     0x000000aa       0x2e main.o

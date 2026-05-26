@@ -20,11 +20,11 @@ int main(void)
     {
 		if((PIND&(1<<PD2)) && !(PIND&(1<<PD5)))
 		{
-			CW();
+			CCW();
 		}
 		else if((PIND&(1<<PD5)) && !(PIND&(1<<PD2)))
 		{
-			CCW();
+			CW();
 		}
 		else
 		{
@@ -32,12 +32,12 @@ int main(void)
 		}
     }
 }
-void CW()
+void CCW()
 {
 	PORTB|=(1<<PB4);
 	PORTB&=~(1<<PB5);
 }
-void CCW()
+void CW()
 {
 	PORTB|=(1<<PB5);
 	PORTB&=~(1<<PB4);

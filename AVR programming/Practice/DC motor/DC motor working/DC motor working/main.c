@@ -5,9 +5,9 @@
  * Author : User
  */ 
 
-#define F_CPU 16000000UL
 #include <avr/io.h>
 #include <util/delay.h>
+#define F_CPU 16000000UL
 
 int main(void)
 {
@@ -24,14 +24,17 @@ int main(void)
 		// Pin 1 and 2 off
 		PORTD&=~(1<<PD2);
 		PORTD&=~(1<<PD5);
-		_delay_ms(3000);
+		_delay_ms(1000);
 		
 		// Pin 1 off 2 on
 		PORTD&=~(1<<PD2);
 		PORTD|=(1<<PD5);
 		_delay_ms(5000);
 		
-		
+		// Pin 1 and 2 off
+		PORTD&=~(1<<PD2);
+		PORTD&=~(1<<PD5);
+		_delay_ms(1000);
 		
 	}
 }

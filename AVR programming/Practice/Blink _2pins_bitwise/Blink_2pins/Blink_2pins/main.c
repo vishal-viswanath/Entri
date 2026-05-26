@@ -15,22 +15,30 @@ int main(void)
     
     while (1) 
     {
-		// Pin 1 on 2 off
+		// Pin 1 ON 2 OFF
 		PORTD|=(1<<PD2); 
 		PORTD&=~(1<<PD5);              
-		_delay_ms(5000);
-		
-		// Pin 1 and 2 off
-		PORTD&=~(1<<PD2); 
-		PORTD&=~(1<<PD5);           
 		_delay_ms(3000);
 		
-		// Pin 1 off 2 on
+		// Pin 1 OFF 2 ON
 		PORTD&=~(1<<PD2);
 		PORTD|=(1<<PD5);               
-		_delay_ms(5000);
+		_delay_ms(3000);
 		
-		             
+		// Pin 1 and 2 OFF
+		PORTD&=~(1<<PD2);
+		PORTD&=~(1<<PD5);
+		_delay_ms(3000);
+		
+		// Pin 1 and 2 ON 
+		PORTD|=(1<<PD2);
+		PORTD|=(1<<PD5);
+		_delay_ms(3000);
+		
+		// Pin 1 and 2 OFF
+		PORTD&=~(1<<PD2);
+		PORTD&=~(1<<PD5);
+		_delay_ms(3000);       
 		
     }
 }

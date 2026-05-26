@@ -72,8 +72,8 @@ Disassembly of section .text:
   7c:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
 
 00000080 <delay_1s>:
-#define F_CPU 16000000UL
 #include <avr/io.h>
+#define F_CPU 16000000UL
 
 void delay_1s(void)
 {
