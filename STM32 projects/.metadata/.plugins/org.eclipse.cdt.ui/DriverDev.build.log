@@ -1,0 +1,27 @@
+11:48:18 **** Build of configuration Debug for project DriverDev ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f401retx.d" -MT"Startup/startup_stm32f401retx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f401retx.o" "../Startup/startup_stm32f401retx.s"
+arm-none-eabi-gcc "../Src/Gpioint.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/User/OneDrive/Desktop/STM32 projects/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/Gpioint.d" -MT"Src/Gpioint.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/Gpioint.o"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/User/OneDrive/Desktop/STM32 projects/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/User/OneDrive/Desktop/STM32 projects/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/User/OneDrive/Desktop/STM32 projects/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../Drivers/Src/GPIO_toggle.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/User/OneDrive/Desktop/STM32 projects/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/GPIO_toggle.d" -MT"Drivers/Src/GPIO_toggle.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/Src/GPIO_toggle.o"
+arm-none-eabi-gcc "../Drivers/Src/stm32f401xx_gpio_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/User/OneDrive/Desktop/STM32 projects/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f401xx_gpio_driver.d" -MT"Drivers/Src/stm32f401xx_gpio_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/Src/stm32f401xx_gpio_driver.o"
+../Src/main.c:28:5: warning: "/*" within comment [-Wcomment]
+   28 |     /* Loop forever */
+      |      
+arm-none-eabi-gcc "../Drivers/Src/stm32f401xx_spi_driver.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DNUCLEO_F401RE -DSTM32 -DSTM32F401RETx -DSTM32F4 -c -I../Inc -I"C:/Users/User/OneDrive/Desktop/STM32 projects/DriverDev/Drivers/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/Src/stm32f401xx_spi_driver.d" -MT"Drivers/Src/stm32f401xx_spi_driver.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/Src/stm32f401xx_spi_driver.o"
+arm-none-eabi-gcc -o "DriverDev.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\User\OneDrive\Desktop\STM32 projects\DriverDev\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DriverDev.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: DriverDev.elf
+ 
+arm-none-eabi-size  DriverDev.elf 
+arm-none-eabi-objdump -h -S DriverDev.elf  > "DriverDev.list"
+   text	   data	    bss	    dec	    hex	filename
+   2308	      0	   1568	   3876	    f24	DriverDev.elf
+Finished building: default.size.stdout
+ 
+Finished building: DriverDev.list
+ 
+
+11:48:20 Build Finished. 0 errors, 1 warnings. (took 2s.313ms)
+
